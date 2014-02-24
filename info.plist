@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>org.koffel.alfred.amazon-affiliate-links</string>
+	<key>connections</key>
+	<dict>
+		<key>221025C2-26B2-4105-B171-A62E18219FBD</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>25A56D0A-4C3F-473A-830A-6F1098A17516</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>844B3B4E-84EA-4F88-B49D-9B1A331D6130</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>82825BEC-AEA9-411C-9817-6EC6F28A45EA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>14611201-5C06-4FD7-89FA-8C1CB4113AC8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>EF168608-FF78-4D80-808A-44CF75BE204D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>82825BEC-AEA9-411C-9817-6EC6F28A45EA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Will Koffel</string>
+	<key>description</key>
+	<string>Generate tagged links with your own affiliate code.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Amazon Affiliate Links</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>keyword</key>
+				<string>alink</string>
+				<key>runningsubtext</key>
+				<string>Generating Link ...</string>
+				<key>script</key>
+				<string>ruby amazon-affiliate-links.rb {query}</string>
+				<key>subtext</key>
+				<string>Provide a Product URL</string>
+				<key>title</key>
+				<string>Generate Amazon Affiliate Link</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>221025C2-26B2-4105-B171-A62E18219FBD</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>25A56D0A-4C3F-473A-830A-6F1098A17516</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>Copied to Clipboard</string>
+				<key>title</key>
+				<string>Amazon Affiliate Link Generated</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>844B3B4E-84EA-4F88-B49D-9B1A331D6130</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>ruby amazon-affiliate-code.rb {query}</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>82825BEC-AEA9-411C-9817-6EC6F28A45EA</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>output</key>
+				<integer>0</integer>
+				<key>removeextension</key>
+				<false/>
+				<key>sticky</key>
+				<false/>
+				<key>text</key>
+				<string>to {query}</string>
+				<key>title</key>
+				<string>Amazon Affiliate Code Set</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>14611201-5C06-4FD7-89FA-8C1CB4113AC8</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>keyword</key>
+				<string>alink code</string>
+				<key>runningsubtext</key>
+				<string>Checking current tag...</string>
+				<key>script</key>
+				<string>ruby amazon-affiliate-code.rb {query}</string>
+				<key>subtext</key>
+				<string>Customize with your own tag</string>
+				<key>title</key>
+				<string>Amazon Affiliate Links Code Setup</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>EF168608-FF78-4D80-808A-44CF75BE204D</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>A simple workflow for creating Amazon Affiliate links based on a provided affiliate code.</string>
+	<key>uidata</key>
+	<dict>
+		<key>14611201-5C06-4FD7-89FA-8C1CB4113AC8</key>
+		<dict>
+			<key>ypos</key>
+			<real>290</real>
+		</dict>
+		<key>221025C2-26B2-4105-B171-A62E18219FBD</key>
+		<dict>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+		<key>25A56D0A-4C3F-473A-830A-6F1098A17516</key>
+		<dict>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+		<key>82825BEC-AEA9-411C-9817-6EC6F28A45EA</key>
+		<dict>
+			<key>ypos</key>
+			<real>290</real>
+		</dict>
+		<key>844B3B4E-84EA-4F88-B49D-9B1A331D6130</key>
+		<dict>
+			<key>ypos</key>
+			<real>160</real>
+		</dict>
+		<key>EF168608-FF78-4D80-808A-44CF75BE204D</key>
+		<dict>
+			<key>ypos</key>
+			<real>290</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://github.com/wkoffel/alfred-amazon-affiliate-links</string>
+</dict>
+</plist>
