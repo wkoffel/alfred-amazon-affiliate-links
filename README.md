@@ -2,21 +2,21 @@
 
 An [Alfred](http://www.alfredapp.com/ "Alfred App") workflow for generating simple [Amazon Affiliate](http://affiliate-program.amazon.com) links with your own tag.  Designed for anyone who generates a lot of custom links from URLs.  This workflow will clean up all the parameters from an amazon.com URL, and then append the configured tag to it.
 
-![Screenshot: Alred Workflow Topology](https://raw.github.com/wkoffel/alfred-terminal-control/master/screenshots/workflow.png "Workflow Topology")
+![Screenshot: Alred Workflow Topology](https://raw.github.com/wkoffel/alfred-amazon-affiliate-links/master/screenshots/workflow.png "Workflow Topology")
 
 
 ### Setting Your Affiliate Code
 
 The keyword trigger *alink code <your-affiliate-tag>* will set a new affiliate code, which all subsequent calls to *alink* will use.
 
-![Screenshot: Set Affiliate Code](https://raw.github.com/wkoffel/alfred-terminal-control/master/screenshots/set-affiliate-code.png "Set Affiliate Code")
+![Screenshot: Set Affiliate Code](https://raw.github.com/wkoffel/alfred-amazon-affiliate-links/master/screenshots/set-affiliate-code.png "Set Affiliate Code")
 
 
 ### Generating Links
 
 The keyword trigger *alink <an-amazon-product-url>* will strip extra junk from the URL (all the query params, which aren't necessary for Amazon product links), and append "tag=your-affiliate-tag" to it, copying the result to the clipboard.
 
-![Screenshot: Generate Affiliate Link](https://raw.github.com/wkoffel/alfred-terminal-control/master/screenshots/generate-affiliate-link.png "Generate Affiliate Link")
+![Screenshot: Generate Affiliate Link](https://raw.github.com/wkoffel/alfred-amazon-affiliate-links/master/screenshots/generate-affiliate-link.png "Generate Affiliate Link")
 
 You will get an error message if you haven't set an affiliate code yet (see above), or if the target link is not a valid Amazon link.
 
