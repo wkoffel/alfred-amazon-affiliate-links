@@ -22,13 +22,13 @@ You will get an error message if you haven't set an affiliate code yet (see abov
 
 ### Install Notes
 
-Download the compiled workflow directly at https://github.com/wkoffel/alfred-amazon-affiliate-links/
+Download the compiled workflow directly at http://cl.ly/image/2F3I3w3s0E1F
 
 Visit the repository for the full source code at https://github.com/wkoffel/alfred-amazon-affiliate-links/
 
 In theory, I've bundled all the necessary ruby gems in the workflow package proper, so it should be a simple double-click install.  If you do need to install manually, please let me know.  To install manual dependencies, you would run just "sudo gem install alfredo addressable", and that should suffice.
 
-This has been tested on OS X 10.9 Mountain Lion.  I didn't bundle the necessary gems for earlier ruby versions.  If you need support for an earlier OS version, reach out and I can help easily.
+This has been tested on OS X 10.13 High Sierra. The necessary gems for earlier ruby versions may still be bundled, so give it a try.  Reach out if anything doesn't work for you, so we can update these notes.
 
 ### Credits
 
@@ -37,5 +37,5 @@ Thanks to phyllisstein for [Alleyoop](http://www.alfredforum.com/topic/1582-alle
 
 ### Release Notes
 
-* v1.0 (Mar 1, 2014) - Initial release
-
+* v1.0 (Feb 24, 2014) - Initial release
+* v1.1 (Mar 24, 2018) - Support for Alfred 3 and macOS 10.13
