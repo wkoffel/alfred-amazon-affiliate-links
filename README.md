@@ -39,3 +39,4 @@ Thanks to phyllisstein for [Alleyoop](http://www.alfredforum.com/topic/1582-alle
 
 * v1.0 (Feb 24, 2014) - Initial release
 * v1.1 (Mar 24, 2018) - Support for Alfred 3 and macOS 10.13
+* v1.2 (Oct 27, 2019) - Update for Alfred preferred JSON format, support for macOS 10.15 Catalina
